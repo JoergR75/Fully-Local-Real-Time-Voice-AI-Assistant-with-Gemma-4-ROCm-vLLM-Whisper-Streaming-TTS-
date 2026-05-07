@@ -173,7 +173,7 @@ python3 chat_agent_stream_piper_vllm_ryzen_ai.py
 ```
 Starting the Gemma 4 model, Piper-TTS, and Whisper for the first time will download their weights. This may take 5–10 minutes, depending on your internet connection. 
 
-<img width="851" height="949" alt="image" src="https://github.com/user-attachments/assets/de55543f-a062-419f-8e8d-aacf1e9dd01e" />
+<img width="2186" height="2695" alt="image" src="https://github.com/user-attachments/assets/a2cf43e6-83db-4390-b63a-df9464215dd0" />
 
 ### 7️⃣ Launch the Gradio web Agent from another device connected to same network
 First, SSH into the web server and forward port **7860**:
