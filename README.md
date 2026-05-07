@@ -60,11 +60,12 @@ SamplingParams(
 
 Tested on:
 
+- AMD Radeon™ AI PRO R9700/9600D 
 - AMD Ryzen™ AI MAX 390 w/ Radeon 8050S (Strix Halo)
 - ROCm 7.2.1
 - Ubuntu 22.04 / 24.04
-- PyTorch 2.11 (Preview)
-- vLLM 0.16
+- PyTorch 2.10
+- vLLM 0.20.2rc1
 
 Designed specifically for AMD GPU acceleration.
 
@@ -111,8 +112,8 @@ rocm/vllm-dev:...
 Uses the ROCm 7.2 vLLM development image with:
 Ubuntu 24.04
 Python 3.12
-PyTorch 2.9
-vLLM 0.14.0rc0
+PyTorch 2.10
+vLLM 0.20.2rc1
 
 Notes
 Adjust /dev/dri/cardX and /dev/dri/renderDX if your GPU uses different device IDs (ls /dev/dri/ to verify).
