@@ -168,8 +168,9 @@ wget https://raw.githubusercontent.com/JoergR75/Fully-Local-Real-Time-Voice-AI-A
 ```
 
 ### 6️⃣ **Run** the Chat Agent
+For **Radeon AI PRO**
 ```bash
-python3 chat_agent_stream_piper_vllm_ryzen_ai.py
+python3 chat_agent_stream_piper_vllm_radeon_ai_pro_gemma4.py
 ```
 Starting the Gemma 4 model, Piper-TTS, and Whisper for the first time will download their weights. This may take 10–15 minutes, depending on your internet connection. 
 
