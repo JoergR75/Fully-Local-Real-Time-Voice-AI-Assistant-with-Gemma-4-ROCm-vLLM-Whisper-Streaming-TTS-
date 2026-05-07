@@ -45,10 +45,10 @@ Microphone → Whisper → Qwen3 4B (vLLM with real-time streaming) → Piper-TT
 MODEL_ID = "Phu-Hien/gemma_4_dkkd_lora_vllm"
 
 SamplingParams(
-    max_tokens=512,
-    temperature=0.2,
-    top_p=0.9
-    top_k=50,
+    max_tokens=300,
+        temperature=0.1,
+        top_p=0.9,
+        top_k=50,
 )
 ```
 
