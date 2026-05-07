@@ -158,8 +158,13 @@ hf download DavidAU/Llama3.3-8B-Instruct-Thinking-Heretic-Uncensored-Claude-4.5-
 ```
 
 ### 5️⃣ **Download** the Chat Agent script
+for Radeon AI PRO R9700/9600D
 ```bash
-wget https://raw.githubusercontent.com/JoergR75/Local-GPU-Voice-Assistant-with-Real-Time-LLM-Streaming-ROCm-vLLM-Whisper-TTS-/refs/heads/main/Ryzen_AI/chat_agent_stream_piper_vllm_ryzen_ai.py
+wget https://raw.githubusercontent.com/JoergR75/Fully-Local-Real-Time-Voice-AI-Assistant-with-Gemma-4-ROCm-vLLM-Whisper-Streaming-TTS-/refs/heads/main/chat_agent_stream_piper_vllm_radeon_ai_pro_gemma4.py
+```
+for Ryzen AI
+```bash
+wget https://raw.githubusercontent.com/JoergR75/Fully-Local-Real-Time-Voice-AI-Assistant-with-Gemma-4-ROCm-vLLM-Whisper-Streaming-TTS-/refs/heads/main/chat_agent_stream_piper_vllm_ryzen_ai_gemma4.py
 ```
 
 ### 6️⃣ **Run** the Chat Agent
