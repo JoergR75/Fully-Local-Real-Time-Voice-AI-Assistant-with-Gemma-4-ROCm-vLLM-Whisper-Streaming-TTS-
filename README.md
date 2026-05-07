@@ -186,5 +186,5 @@ ssh -L 7860:0.0.0.0:7860 ai1@192.168.178.xxx
 ```
 Now you can open **http://localhost:7860** in your local browser to access the Gradio Web Agent.
 
-<img width="1578" height="1730" alt="image" src="https://github.com/user-attachments/assets/7cf1e8f5-80e1-4284-b7cb-cb18bf3d9230" />
+<img width="1986" height="2316" alt="image" src="https://github.com/user-attachments/assets/101f2e80-6e95-489c-b610-833568006ed2" />
 
