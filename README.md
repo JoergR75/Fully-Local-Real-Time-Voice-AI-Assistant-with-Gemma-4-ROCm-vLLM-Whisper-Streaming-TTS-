@@ -26,7 +26,7 @@ Everything runs 100% locally on an AMD GPU with ROCm support.
 
 **Pipeline Flow:**
 
-Microphone → Whisper → Qwen3 4B (vLLM with real-time streaming) → Piper-TTS → Audio Playback
+Microphone → Whisper → Gemma 4 (vLLM with real-time streaming) → Piper-TTS → Audio Playback
 
 **Core Components**
 
@@ -108,9 +108,9 @@ sudo docker run -it \
 | `--entrypoint /bin/bash` |  |
 | `--group-add video` | Ensures proper GPU access permissions inside the container |
 
-rocm/vllm-dev:...
+rocm/vllm-openai:...
 Uses the ROCm 7.2 vLLM development image with:
-Ubuntu 24.04
+Ubuntu 22.04
 Python 3.12
 PyTorch 2.10
 vLLM 0.20.2rc1
