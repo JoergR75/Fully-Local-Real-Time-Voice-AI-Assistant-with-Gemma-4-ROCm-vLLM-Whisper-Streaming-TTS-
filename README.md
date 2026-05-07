@@ -54,7 +54,7 @@ SamplingParams(
 
 - Mostly deterministic output
 - Some small variety
-- Output will not exceed 512 tokens
+- Output will not exceed 300 tokens
 
 ## 🖥 Hardware & Platform
 
