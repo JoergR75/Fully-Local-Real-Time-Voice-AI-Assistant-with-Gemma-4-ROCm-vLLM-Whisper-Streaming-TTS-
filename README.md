@@ -1,6 +1,6 @@
 # 🤖 Fully Local Real Time Voice AI Assistant with Gemma 4 ROCm vLLM Whisper Streaming
 
-A fully offline, GPU-accelerated AI voice assistant that streams LLM responses in real time with speech input and output on AMD ROCm hardware.
+A fully offline, GPU-accelerated AI voice assistant that streams Gemma 4 LLM responses in real time with speech input and output on AMD ROCm hardware.
 
 ## 🚀 Overview
 
