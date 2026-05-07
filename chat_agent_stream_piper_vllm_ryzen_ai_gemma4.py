@@ -228,7 +228,7 @@ if __name__ == "__main__":
         model=MODEL_ID,
         gpu_memory_utilization=0.92,
         dtype="bfloat16",
-        max_model_len=4096,
+        max_model_len=-1,
         # enforce_eager=False,
         trust_remote_code=True,
     )
