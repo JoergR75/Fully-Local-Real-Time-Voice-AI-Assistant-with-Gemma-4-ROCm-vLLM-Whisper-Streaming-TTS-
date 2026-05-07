@@ -65,7 +65,7 @@ Tested on:
 - ROCm 7.2.1
 - Ubuntu 22.04 / 24.04
 - PyTorch 2.10
-- vLLM 0.20.2rc1
+- vLLM 0.20.1
 
 Designed specifically for AMD GPU acceleration.
 
@@ -84,7 +84,7 @@ Designed specifically for AMD GPU acceleration.
 ### 1️⃣ **System preperation**
 Install the latest **RDNA4** architecture docker vLLM container for Ubuntu 24.04
 ```bash
-docker pull vllm/vllm-openai-rocm:nightly-0c620d2e083a49ba40c2a5df318fa246d7e7a59b
+docker pull vllm/vllm-openai-rocm:v0.20.1
 ```
 
 ### 2️⃣ **Start the vLLM container**
@@ -96,7 +96,7 @@ sudo docker run -it \
     --security-opt seccomp=unconfined \
     --group-add video \
     --entrypoint /bin/bash \
-    vllm/vllm-openai-rocm:nightly-0c620d2e083a49ba40c2a5df318fa246d7e7a59b
+    vllm/vllm-openai-rocm:v0.20.1
 ```
 
 | Flag / Option | Purpose |
@@ -113,7 +113,7 @@ Uses the ROCm 7.2 vLLM development image with:
 Ubuntu 22.04
 Python 3.12
 PyTorch 2.10
-vLLM 0.20.2rc1
+vLLM 0.20.1
 
 Notes
 Adjust /dev/dri/cardX and /dev/dri/renderDX if your GPU uses different device IDs (ls /dev/dri/ to verify).
