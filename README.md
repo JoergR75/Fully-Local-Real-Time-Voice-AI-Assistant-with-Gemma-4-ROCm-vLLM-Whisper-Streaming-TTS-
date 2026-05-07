@@ -42,7 +42,7 @@ Microphone → Whisper → Qwen3 4B (vLLM with real-time streaming) → Piper-TT
 
 ## ⚙️ Model Configuration
 ```python
-MODEL_ID = "unsloth/Qwen3-4B-Instruct-2507"
+MODEL_ID = "Phu-Hien/gemma_4_dkkd_lora_vllm"
 
 SamplingParams(
     max_tokens=512,
