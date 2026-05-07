@@ -83,7 +83,7 @@ Designed specifically for AMD GPU acceleration.
 ### 1️⃣ **System preperation**
 Install the latest **RDNA4** architecture docker vLLM container for Ubuntu 24.04
 ```bash
-docker pull rocm/vllm-dev:rocm7.2.1_navi_ubuntu24.04_py3.12_pytorch_2.9_vllm_0.16.0
+docker pull vllm/vllm-openai-rocm:nightly-0c620d2e083a49ba40c2a5df318fa246d7e7a59b
 ```
 
 ### 2️⃣ **Start the vLLM container**
@@ -95,7 +95,7 @@ sudo docker run -it \
     --security-opt seccomp=unconfined \
     --group-add video \
     --entrypoint /bin/bash \
-    rocm/vllm-dev:rocm7.2.1_navi_ubuntu24.04_py3.12_pytorch_2.9_vllm_0.16.0
+    vllm/vllm-openai-rocm:nightly-0c620d2e083a49ba40c2a5df318fa246d7e7a59b
 ```
 
 | Flag / Option | Purpose |
