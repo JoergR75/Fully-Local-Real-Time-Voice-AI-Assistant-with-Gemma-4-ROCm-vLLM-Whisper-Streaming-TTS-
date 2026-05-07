@@ -171,7 +171,7 @@ wget https://raw.githubusercontent.com/JoergR75/Fully-Local-Real-Time-Voice-AI-A
 ```bash
 python3 chat_agent_stream_piper_vllm_ryzen_ai.py
 ```
-Starting the Gemma 4 model, Piper-TTS, and Whisper for the first time will download their weights. This may take 5–10 minutes, depending on your internet connection. 
+Starting the Gemma 4 model, Piper-TTS, and Whisper for the first time will download their weights. This may take 10–15 minutes, depending on your internet connection. 
 
 <img width="2186" height="2695" alt="image" src="https://github.com/user-attachments/assets/a2cf43e6-83db-4390-b63a-df9464215dd0" />
 
