@@ -78,7 +78,7 @@ Audio Playback
 
 * AMD Radeon™ AI PRO R9700
 * AMD Radeon™ AI PRO R9600
-* AMD Ryzen™ AI MAX+ 390
+* AMD Ryzen™ AI MAX 390
 * AMD Instinct™ GPUs
 * RDNA3 / RDNA4 GPUs
 * CDNA2 / CDNA3 / CDNA4 GPUs
