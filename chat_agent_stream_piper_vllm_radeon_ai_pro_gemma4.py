@@ -259,7 +259,7 @@ if __name__ == "__main__":
     | **Library:** vLLM v0.20.1    | **OS:** Ubuntu 22.04                            | **UI:** Gradio |
 
     ## 🔗 Resources
-    [![ROCm](https://img.shields.io/badge/ROCm-7.2-ff6b6b?logo=amd)](https://rocm.docs.amd.com/en/docs-7.2.0/about/release-notes.html)
+    [![ROCm](https://img.shields.io/badge/ROCm-7.2.1-ff6b6b?logo=amd)](https://rocm.docs.amd.com/en/docs-7.2.0/about/release-notes.html)
     [![Whisper GitHub repo](https://img.shields.io/badge/Whisper-GitHub_repo-blue)](https://github.com/JoergR75/whisper_rocm_transcribe/tree/main/whisper_gradio_web_ui)
     [![Gradio](https://img.shields.io/badge/Gradio-Quickstart-orange)](https://www.gradio.app/guides/quickstart)
     [![PyTorch](https://img.shields.io/badge/PyTorch-2.10.0%20(Preview)-ee4c2c?logo=pytorch)](https://pytorch.org/get-started/locally/)
