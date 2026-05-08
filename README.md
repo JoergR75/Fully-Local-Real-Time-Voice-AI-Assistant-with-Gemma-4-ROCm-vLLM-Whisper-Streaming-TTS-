@@ -185,6 +185,7 @@ MODEL_DIR=/app/models/gemma_4_dkkd_lora_vllm
 mkdir -p $MODEL_DIR
 hf download Phu-Hien/gemma_4_dkkd_lora_vllm --local-dir $MODEL_DIR
 ```
+This may take 10–15 minutes, depending on your internet connection.
 
 ### 5️⃣ **Download** the Chat Agent script
 ```bash
@@ -195,7 +196,7 @@ wget https://raw.githubusercontent.com/JoergR75/Fully-Local-Real-Time-Voice-AI-A
 ```bash
 python3 chat_agent_stream_piper_vllm_radeon_ai_pro_gemma4.py
 ```
-Starting the Gemma 4 model, Piper-TTS, and Whisper for the first time will download their weights. This may take 10–15 minutes, depending on your internet connection. 
+Starting the Gemma 4 model, Piper-TTS, and Whisper for the first time will download their weights. 
 
 <img width="2186" height="2695" alt="image" src="https://github.com/user-attachments/assets/a2cf43e6-83db-4390-b63a-df9464215dd0" />
 
