@@ -40,7 +40,6 @@ Microphone → Whisper → Gemma 4 (vLLM with real-time streaming) → Piper-TTS
 - Microphone input
 - Autoplay audio responses
 
-````markdown
 # 🚀 Select Your AMD AI Platform
 
 Choose your installation path below:
@@ -139,7 +138,7 @@ python app.py
 ```
 
 ```
-```
+
 
 
 
