@@ -138,7 +138,7 @@ sudo docker run -it \
 | `--device=/dev/kfd` | Grants access to the ROCm kernel driver (required for compute) |
 | `--device=/dev/dri` | Passes the physical GPU device into the container |
 | `--security-opt seccomp=unconfined` | Required to avoid ROCm-related syscall restrictions |
-| `--entrypoint /bin/bash` |  |
+| `--entrypoint /bin/bash` | Overrides the default startup command of the container and launches an interactive Bash shell instead |
 | `--group-add video` | Ensures proper GPU access permissions inside the container |
 
 rocm/vllm-openai:...
