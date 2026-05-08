@@ -64,6 +64,9 @@ from faster_whisper import WhisperModel
 from transformers import AutoTokenizer
 from vllm import LLM, SamplingParams
 
+os.environ["TRANSFORMERS_OFFLINE"] = "1"
+os.environ["HF_HUB_OFFLINE"] = "1"
+
 # -----------------------------
 # Model configuration
 # -----------------------------
