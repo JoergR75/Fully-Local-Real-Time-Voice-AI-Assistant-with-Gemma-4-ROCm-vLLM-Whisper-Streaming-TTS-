@@ -74,7 +74,11 @@ MODEL_ID = "/app/models/gemma_4_dkkd_lora_vllm"
 # MODEL_ID = "predibase/Mistral-7B-Instruct-v0.2-medusa-vllm "
 # MODEL_ID = "Orenguteng/Llama-3.1-8B-Lexi-Uncensored-V2"
 
-tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
+tokenizer = AutoTokenizer.from_pretrained(
+    MODEL_ID,
+    local_files_only=True,
+    trust_remote_code=True
+)
 
 # -----------------------------
 # Faster-Whisper (Speech → Text)
