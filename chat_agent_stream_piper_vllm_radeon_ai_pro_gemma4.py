@@ -245,10 +245,10 @@ if __name__ == "__main__":
 
     |  🧠   **Model Stack** |  🚀 **Hardware & Platform** |  🎤  **How to Use** |
     |------------------|--------------------------|------------------|
-    | **LLM:** Gemma 4 E4B | **System:** 2P EPYC 9754 (128C/256T), 1.5TB |  💬  Type your message |
+    | **LLM:** Gemma 4 LoRa | **System:** 2P EPYC 9754 (128C/256T), 1.5TB |  💬  Type your message |
     | **ASR:** faster-whisper (base)     | **GPU:** AMD Radeon AI PRO R9700                |  🎙️  Or speak directly |
-    | **Framework:** PyTorch 2.10| **Runtime:** ROCm 7                              |  ⚡  Runs fully local |
-    | **Library:** vLLM v0.20.2rc1    | **OS:** Ubuntu 24.04                            | **UI:** Gradio |
+    | **Framework:** PyTorch 2.10| **Runtime:** ROCm 7.2                              |  ⚡  Runs fully local |
+    | **Library:** vLLM v0.20.1    | **OS:** Ubuntu 22.04                            | **UI:** Gradio |
 
     ## 🔗 Resources
     [![ROCm](https://img.shields.io/badge/ROCm-7.2-ff6b6b?logo=amd)](https://rocm.docs.amd.com/en/docs-7.2.0/about/release-notes.html)
