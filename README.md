@@ -155,6 +155,16 @@ For production use, consider adding volume mounts for model storage and persiste
 
 
 ### 3️⃣ **Update and install** the container environment
+The following commands install the required packages and tools for the fully local voice AI assistant environment.
+Included Components
+- nano → lightweight terminal text editor
+- ffmpeg → audio processing backend required for Whisper and Gradio
+- pip / wheel → updated Python package management tools
+- Gradio → browser-based web UI for chat and voice interaction
+- faster-whisper → GPU-accelerated speech-to-text transcription
+- huggingface_hub[cli] → Hugging Face CLI tools for downloading models
+- Piper-TTS → fully offline text-to-speech engine
+- Piper voice models → downloadable English speech synthesis voices
 ```bash
 sudo apt update
 sudo apt install nano -y
