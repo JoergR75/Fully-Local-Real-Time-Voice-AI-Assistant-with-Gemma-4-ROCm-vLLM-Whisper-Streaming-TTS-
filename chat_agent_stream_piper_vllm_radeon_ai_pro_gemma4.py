@@ -255,7 +255,7 @@ if __name__ == "__main__":
     |------------------|--------------------------|------------------|
     | **LLM:** Gemma 4 LoRa | **System:** 2P EPYC 9754 (128C/256T), 1.5TB |  💬  Type your message |
     | **ASR:** faster-whisper (base)     | **GPU:** AMD Radeon AI PRO R9700                |  🎙️  Or speak directly |
-    | **Framework:** PyTorch 2.10| **Runtime:** ROCm 7.2                              |  ⚡  Runs fully local |
+    | **Framework:** PyTorch 2.10| **Runtime:** ROCm 7.2.1                              |  ⚡  Runs fully local |
     | **Library:** vLLM v0.20.1    | **OS:** Ubuntu 22.04                            | **UI:** Gradio |
 
     ## 🔗 Resources
