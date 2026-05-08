@@ -179,10 +179,11 @@ wget https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/libritts/
 cd ..
 ```
 
-### 4️⃣ **Download** the model - here the Qwen3-4B-Instruct-2507
+### 4️⃣ **Download** the model - **Phu-Hien/gemma_4_dkkd_lora_vllm**
 ```bash
-mkdir /app/models/qwen3-4b-instruct-2507
-hf download Qwen/Qwen3-4B-Instruct-2507 --local-dir /app/models/qwen3-4b-instruct-2507
+MODEL_DIR=/app/models/gemma_4_dkkd_lora_vllm
+mkdir -p $MODEL_DIR
+hf download Phu-Hien/gemma_4_dkkd_lora_vllm --local-dir $MODEL_DIR
 ```
 
 ### 5️⃣ **Download** the Chat Agent script
