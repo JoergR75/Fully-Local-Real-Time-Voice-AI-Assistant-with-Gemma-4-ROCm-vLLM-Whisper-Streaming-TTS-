@@ -77,7 +77,8 @@ MODEL_ID = "/app/models/gemma_4_dkkd_lora_vllm"
 tokenizer = AutoTokenizer.from_pretrained(
     MODEL_ID,
     local_files_only=True,
-    trust_remote_code=True
+    trust_remote_code=True,
+    fix_mistral_regex=True
 )
 
 # -----------------------------
