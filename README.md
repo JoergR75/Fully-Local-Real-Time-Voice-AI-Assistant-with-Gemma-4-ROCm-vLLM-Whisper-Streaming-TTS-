@@ -106,7 +106,7 @@ Choose your installation path below:
 
 ---
 
-# 🟥 Radeon AI PRO R9700 Installation
+# 🟥 Radeon™ AI PRO R9700 Installation
 
 ## Recommended Environment
 - Ubuntu 22.04 / 24.04
@@ -214,13 +214,13 @@ Now you can open **http://localhost:7860** in your local browser to access the G
 
 ---
 
-# 🟦 Ryzen AI MAX+ 390 Installation
+# 🟦 Ryzen™ AI MAX 390 Installation
 
 ## Recommended Environment
 
-* Ubuntu 24.04
-* Ryzen AI MAX+ 390
-* ROCm 6.4.2+
+* Ubuntu 22.04 / 24.04
+* Ryzen AI MAX 390
+* ROCm 7.2+
 * Shared memory optimized setup
 
 
