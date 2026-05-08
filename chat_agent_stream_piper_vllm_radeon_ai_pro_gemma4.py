@@ -7,9 +7,9 @@
 #
 #   • vLLM            → fast LLM inference + streaming tokens
 #   • Gradio          → web UI / chat interface
-#   • OpenAI Whisper  → speech-to-text (STT)
+#   • Faster-Whisper  → speech-to-text (STT)
 #   • Piper TTS       → text-to-speech (TTS)
-#   • Gemma 4 - Phu-Hien/gemma_4_dkkd_lora_vllm
+#   • Gemma 4 LoRa    → Phu-Hien/gemma_4_dkkd_lora_vllm
 #
 # Features:
 #   • low-latency streaming responses
@@ -40,7 +40,7 @@
 #   - PyTorch (ROCm build)
 #   - vLLM
 #   - Gradio
-#   - Whisper
+#   - faster-Whisper
 #   - piper-tts
 #   - piper voices (Eng) - https://huggingface.co/rhasspy/piper-voices/tree/main/en/en_US
 #
@@ -49,7 +49,7 @@
 # ---------------------------------------------------------------------------------------------------------------
 # Author:            Joerg Roskowetz
 # First Run:         ~10–20 minutes (model + container download depending on internet speed)
-# Last Updated:      2026-05-07
+# Last Updated:      2026-05-08
 # License:           Personal / Research use
 # ================================================================================================================
 
