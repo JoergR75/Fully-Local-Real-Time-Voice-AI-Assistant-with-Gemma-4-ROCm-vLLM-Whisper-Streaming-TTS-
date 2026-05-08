@@ -95,17 +95,6 @@ Audio Playback
 
 ---
 
-# ⚡ Highlights
-
-* 100% local execution
-* No cloud dependencies
-* Real-time token streaming
-* Fully GPU accelerated
-* Optimized for AMD ROCm AI workloads
-* Designed for demos, AI agents, local copilots, and enterprise AI showcases
-
----
-
 # 🚀 Select Your AMD AI Platform
 
 Choose your installation path below:
@@ -125,38 +114,115 @@ Choose your installation path below:
 - Radeon AI PRO R9700
 - vLLM >= 0.20
 
-### Install ROCm
+### 1️⃣ **System preperation**
+Install the latest **RDNA4** architecture docker vLLM container for Ubuntu 24.04
+```bash
+docker pull vllm/vllm-openai-rocm:v0.20.1
+```
+
+### 2️⃣ **Start the vLLM container**
+```bash
+sudo docker run -it \
+    -p 7860:7860 \
+    --device=/dev/kfd \
+    --device=/dev/dri \
+    --security-opt seccomp=unconfined \
+    --group-add video \
+    --entrypoint /bin/bash \
+    vllm/vllm-openai-rocm:v0.20.1
+```
+
+| Flag / Option | Purpose |
+|---------------|---------|
+| `-p 7860:7860` | Exposes port 7860 (commonly used for web UIs or API endpoints) |
+| `--device=/dev/kfd` | Grants access to the ROCm kernel driver (required for compute) |
+| `--device=/dev/dri` | Passes the physical GPU device into the container |
+| `--security-opt seccomp=unconfined` | Required to avoid ROCm-related syscall restrictions |
+| `--entrypoint /bin/bash` |  |
+| `--group-add video` | Ensures proper GPU access permissions inside the container |
+
+rocm/vllm-openai:...
+Uses the ROCm 7.2 vLLM development image with:
+Ubuntu 22.04
+Python 3.12
+PyTorch 2.10
+vLLM 0.20.1
+
+Notes
+Adjust /dev/dri/cardX and /dev/dri/renderDX if your GPU uses different device IDs (ls /dev/dri/ to verify).
+Ensure Docker is installed and the ROCm driver is properly configured on the host system.
+For production use, consider adding volume mounts for model storage and persistent data.
+
+
+### 3️⃣ **Update and install** the container environment
 ```bash
 sudo apt update
-sudo apt install rocm
-````
-
-### Verify GPU Detection
-
-```bash
-rocminfo
-rocm-smi
+sudo apt install nano -y
+sudo apt install ffmpeg -y
+python3 -m pip install --upgrade pip wheel
+python3 -m pip install gradio
+python3 -m pip install faster-whisper
+python3 -m pip install huggingface_hub[cli]
+cd /app
+wget https://github.com/rhasspy/piper/releases/latest/download/piper_linux_x86_64.tar.gz
+tar -xzf piper_linux_x86_64.tar.gz
+cd /app/piper
+chmod +x piper
+wget https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx
+wget https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx.json
+wget --content-disposition \
+"https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_US/amy/medium/en_US-amy-medium.onnx?download=true"
+wget --content-disposition \
+"https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_US/amy/medium/en_US-amy-medium.onnx.json?download=true"
+wget https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/libritts/high/en_US-libritts-high.onnx -O en_US-libritts-high.onnx
+wget https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/libritts/high/en_US-libritts-high.onnx.json -O en_US-libritts-high.onnx.json
+cd ..
 ```
 
-### Create Python Environment
-
+### 4️⃣ **Download** the model - here the Qwen3-4B-Instruct-2507
 ```bash
-python3 -m venv gemma4
-source gemma4/bin/activate
+mkdir /app/models/qwen3-4b-instruct-2507
+hf download Qwen/Qwen3-4B-Instruct-2507 --local-dir /app/models/qwen3-4b-instruct-2507
+```
+or the 8B Llama3.3-Instruct-Thinking-Heretic-Uncensored-Claude-4.5-Opus-High-Reasoning model
+```bash
+mkdir /app/models/llama3-3-8b-heretic
+hf download DavidAU/Llama3.3-8B-Instruct-Thinking-Heretic-Uncensored-Claude-4.5-Opus-High-Reasoning --local-dir /app/models/llama3-3-8b-heretic
 ```
 
-### Install PyTorch + vLLM
-
+### 5️⃣ **Download** the Chat Agent script
+for **Radeon AI PRO R9700/9600D**
 ```bash
-pip install torch torchvision torchaudio
-pip install vllm>=0.20
+wget https://raw.githubusercontent.com/JoergR75/Fully-Local-Real-Time-Voice-AI-Assistant-with-Gemma-4-ROCm-vLLM-Whisper-Streaming-TTS-/refs/heads/main/chat_agent_stream_piper_vllm_radeon_ai_pro_gemma4.py
+```
+for **Ryzen AI MAX 390**
+```bash
+wget https://raw.githubusercontent.com/JoergR75/Fully-Local-Real-Time-Voice-AI-Assistant-with-Gemma-4-ROCm-vLLM-Whisper-Streaming-TTS-/refs/heads/main/chat_agent_stream_piper_vllm_ryzen_ai_gemma4.py
 ```
 
-### Launch Application
-
+### 6️⃣ **Run** the Chat Agent
+For **Radeon AI PRO**
 ```bash
-python app.py
+python3 chat_agent_stream_piper_vllm_radeon_ai_pro_gemma4.py
 ```
+Starting the Gemma 4 model, Piper-TTS, and Whisper for the first time will download their weights. This may take 10–15 minutes, depending on your internet connection. 
+
+<img width="2186" height="2695" alt="image" src="https://github.com/user-attachments/assets/a2cf43e6-83db-4390-b63a-df9464215dd0" />
+
+### 7️⃣ Launch the Gradio web Agent from another device connected to same network
+First, SSH into the web server and forward port **7860**:
+```echo
+ssh -L 7860:0.0.0.0:7860 ai1@pc1
+```
+or use the the server IP address
+```echo
+ssh -L 7860:0.0.0.0:7860 ai1@192.168.178.xxx
+```
+Now you can open **http://localhost:7860** in your local browser to access the Gradio Web Agent.
+
+<img width="1986" height="2316" alt="image" src="https://github.com/user-attachments/assets/101f2e80-6e95-489c-b610-833568006ed2" />
+
+
 
 ---
 
