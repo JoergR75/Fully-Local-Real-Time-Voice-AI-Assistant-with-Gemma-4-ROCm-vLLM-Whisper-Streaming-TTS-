@@ -136,7 +136,7 @@ sudo docker run -it \
 |---------------|---------|
 | `-p 7860:7860` | Exposes port 7860 (commonly used for web UIs or API endpoints) |
 | `--device=/dev/kfd` | Grants access to the ROCm kernel driver (required for compute) |
-| `--device=/dev/dri` | Passes the physical GPU device into the container |
+| `--device=/dev/dri` | Passes the physical GPU device into the container (all visable GPU's) |
 | `--security-opt seccomp=unconfined` | Required to avoid ROCm-related syscall restrictions |
 | `--entrypoint /bin/bash` | Overrides the default startup command of the container and launches an interactive Bash shell instead |
 | `--group-add video` | Ensures proper GPU access permissions inside the container |
