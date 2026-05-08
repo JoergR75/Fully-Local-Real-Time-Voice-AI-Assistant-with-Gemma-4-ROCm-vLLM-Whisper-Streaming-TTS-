@@ -109,13 +109,13 @@ Choose your installation path below:
 # 🟥 Radeon AI PRO R9700 Installation
 
 ## Recommended Environment
-- Ubuntu 24.04
-- ROCm 6.4.2+
-- Radeon AI PRO R9700
+- Ubuntu 22.04 / 24.04
+- ROCm 7.2+
+- AMD Radeon AI PRO R9700/R9600D
 - vLLM >= 0.20
 
 ### 1️⃣ **System preperation**
-Install the latest **RDNA4** architecture docker vLLM container for Ubuntu 24.04
+Install the latest **RDNA4** architecture docker vLLM container from open.ai
 ```bash
 docker pull vllm/vllm-openai-rocm:v0.20.1
 ```
