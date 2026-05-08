@@ -249,12 +249,12 @@ if __name__ == "__main__":
     # -----------------------------
     with gr.Blocks(title="🧠 Gemma 4 Local AI Agent | AMD ROCm 7") as demo:
         gr.Markdown("""
-    # 🤖 Local private Voice Assistant with LLM Streaming (ROCm + vLLM + Whisper + Piper-TTS) on Radeon AI PRO R9700
+    # 🤖 Local private Voice Assistant with LLM Streaming (ROCm + vLLM + Whisper + Piper-TTS) on Radeon™ AI PRO R9700
 
     |  🧠   **Model Stack** |  🚀 **Hardware & Platform** |  🎤  **How to Use** |
     |------------------|--------------------------|------------------|
     | **LLM:** Gemma 4 LoRa | **System:** 2P EPYC 9754 (128C/256T), 1.5TB |  💬  Type your message |
-    | **ASR:** faster-whisper (base)     | **GPU:** AMD Radeon AI PRO R9700                |  🎙️  Or speak directly |
+    | **ASR:** faster-whisper (base)     | **GPU:** AMD Radeon™ AI PRO R9700                |  🎙️  Or speak directly |
     | **Framework:** PyTorch 2.10| **Runtime:** ROCm 7.2.1                              |  ⚡  Runs fully local |
     | **Library:** vLLM v0.20.1    | **OS:** Ubuntu 22.04                            | **UI:** Gradio |
 
@@ -265,11 +265,11 @@ if __name__ == "__main__":
     [![PyTorch](https://img.shields.io/badge/PyTorch-2.10.0%20(Preview)-ee4c2c?logo=pytorch)](https://pytorch.org/get-started/locally/)
     [![Docker](https://img.shields.io/badge/Docker-29.2.0-blue?logo=docker)](https://www.docker.com/)
     [![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04%20%7C%2024.04-e95420?logo=ubuntu)](https://ubuntu.com/download/server)
-    [![AMD Radeon AI PRO R9700](https://img.shields.io/badge/AMD-RDNA4%20Radeon(TM)%20AI%20PRO%20R9700-8B0000?logo=amd)](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)
+    [![AMD Radeon™ AI PRO R9700](https://img.shields.io/badge/AMD-RDNA4%20Radeon(TM)%20AI%20PRO%20R9700-8B0000?logo=amd)](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)
 
     """)
 
-        gr.Markdown("Talk or type. Audio runs fully local on one Radeon(TM) AI PRO R9700.")
+        gr.Markdown("Talk or type. Audio runs fully local on one Radeon™ AI PRO R9700.")
 
         chatbot = gr.Chatbot(height=200)
         state = gr.State([])
