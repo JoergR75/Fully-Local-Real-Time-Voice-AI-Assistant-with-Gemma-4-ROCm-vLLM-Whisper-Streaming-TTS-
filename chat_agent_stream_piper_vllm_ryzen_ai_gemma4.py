@@ -242,10 +242,10 @@ if __name__ == "__main__":
 
     |  🧠   **Model Stack** |  🚀 **Hardware & Platform** |  🎤  **How to Use** |
     |------------------|--------------------------|------------------|
-    | **LLM:** Gemma 4  | **System:** AMD Ryzen AI MAX 390 w/ Radeon 8050S |  💬  Type your message |
+    | **LLM:** Gemma 4 LoRa | **System:** AMD Ryzen AI MAX 390 w/ Radeon 8050S |  💬  Type your message |
     | **ASR:** faster-whisper (base)     | **GPU:** Integrated Radeon 8050S                |  🎙️  Or speak directly |
-    | **Framework:** PyTorch 2.9.1| **Runtime:** ROCm 7                              |  ⚡  Runs fully local |
-    | **Library:** vLLM v0.18    | **OS:** Ubuntu 24.04                            | **UI:** Gradio |
+    | **Framework:** PyTorch 2.9.1| **Runtime:** ROCm 7.2                              |  ⚡  Runs fully local |
+    | **Library:** vLLM v0.20.1    | **OS:** Ubuntu 22.04                            | **UI:** Gradio |
 
     ## 🔗 Resources
     [![ROCm](https://img.shields.io/badge/ROCm-7.2.0-ff6b6b?logo=amd)](https://rocm.docs.amd.com/en/docs-7.2.0/about/release-notes.html)
