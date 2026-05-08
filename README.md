@@ -76,10 +76,10 @@ Audio Playback
 
 ## Supported Hardware
 
-* AMD Radeon AI PRO R9700
-* AMD Radeon AI PRO R9600
-* AMD Ryzen AI MAX+ 390
-* AMD Instinct GPUs
+* AMD Radeon™ AI PRO R9700
+* AMD Radeon™ AI PRO R9600
+* AMD Ryzen™ AI MAX+ 390
+* AMD Instinct™ GPUs
 * RDNA3 / RDNA4 GPUs
 * CDNA2 / CDNA3 / CDNA4 GPUs
 
@@ -101,8 +101,8 @@ Choose your installation path below:
 
 | Platform | Description | Installation |
 |---|---|---|
-| 🟥 **Radeon AI PRO R9700** | Dedicated workstation GPU with high VRAM capacity | [Go to Installation](#-radeon-ai-pro-r9700-installation) |
-| 🟦 **Ryzen AI MAX+ 390** | Unified memory AI APU platform optimized for efficiency | [Go to Installation](#-ryzen-ai-max-390-installation) |
+| 🟥 **AMD Radeon™ AI PRO R9700** | Dedicated workstation GPU with high VRAM capacity | [Go to Installation](#-radeon-ai-pro-r9700-installation) |
+| 🟦 **AMD Ryzen™ AI MAX 390** | Unified memory AI APU platform optimized for efficiency | [Go to Installation](#-ryzen-ai-max-390-installation) |
 
 ---
 
