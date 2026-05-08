@@ -1,44 +1,109 @@
-# 🤖 Fully Local Real Time Voice AI Assistant with Gemma 4 ROCm vLLM Whisper Streaming
+# 🤖 Fully Local Real-Time Voice AI Assistant with Gemma 4, ROCm, vLLM, Whisper Streaming, and Piper-TTS
 
-A fully offline, GPU-accelerated AI voice assistant that streams Gemma 4 LLM responses in real time with speech input and output on AMD ROCm hardware.
+A fully offline, GPU-accelerated AI voice assistant that streams Gemma 4 LLM responses in real time with speech input and speech synthesis on AMD ROCm hardware.
 
-## 🚀 Overview
+---
 
-This project provides a fully local, GPU-accelerated AI voice assistant running on AMD ROCm hardware. It combines high-performance LLM inference with real-time speech input and spoken responses, all without relying on cloud services or external APIs.
+# 🚀 Overview
 
-The assistant uses vLLM for fast, streaming language model inference, Whisper for speech-to-text transcription, Piper-TTS for natural voice output, and Gradio for a browser-based chat interface. Responses are streamed token by token for low latency, and audio playback is automatically generated once the answer is complete.
+This project provides a fully local, GPU-accelerated AI voice assistant optimized for AMD ROCm platforms, including Radeon AI PRO and Ryzen AI systems.
 
-The system runs entirely offline on Ubuntu 22.04 or 24.04 with ROCm 7.2 or newer and supports modern AMD GPUs across CDNA and RDNA generations. It is designed for private AI assistant use, on-device LLM experimentation, enterprise demos, and showcasing high-performance local inference on AMD hardware.
+The assistant combines:
 
-Everything runs 100% locally on an AMD GPU with ROCm support.
+* **vLLM** for high-performance real-time LLM inference
+* **Whisper** for speech-to-text transcription
+* **Piper-TTS** for fully offline voice synthesis
+* **Gradio** for a browser-based interactive UI
+* **Gemma 4** LoRA models optimized for vLLM
 
-## 🧠 Features
+All responses are streamed token-by-token with low latency, while generated speech is automatically synthesized and played back locally after completion.
 
-- Text-based chat with streaming responses
-- Voice input via microphone → Whisper → LLM
-- AI voice responses using Piper-TTS
-- Low-latency, high-speed inference with vLLM
-- Customizable personality through system prompts
-- Fully local GPU execution on AMD ROCm hardware
-- Persistent chat history within the session
+The entire pipeline runs fully offline without cloud services, external APIs, or internet connectivity after model installation.
 
-## 🏗 Architecture
+---
 
-**Pipeline Flow:**
+# 🧠 Features
 
-Microphone → Whisper → Gemma 4 (vLLM with real-time streaming) → Piper-TTS → Audio Playback
+* Real-time streaming LLM responses
+* Voice input via microphone using Whisper
+* AI voice playback using Piper-TTS
+* Fully local GPU acceleration with AMD ROCm
+* Low-latency inference with vLLM
+* Persistent in-session chat history
+* Customizable assistant personality via system prompts
+* Browser-based Gradio interface
+* Optimized for Radeon AI PRO and Ryzen AI platforms
 
-**Core Components**
+---
 
-- Model loading and inference via vllm.LLM
-- Chat template handling with Hugging Face tokenizer
-- Real-time token streaming from vLLM to the UI
-- Piper-TTS wrapped for synchronous playback
-- Gradio Blocks UI with:
-- Chatbot display
-- Text input
-- Microphone input
-- Autoplay audio responses
+# 🏗 Architecture
+
+## Pipeline Flow
+
+```text id="1wtqqd"
+Microphone
+   ↓
+Whisper STT
+   ↓
+Gemma 4 + vLLM Streaming Inference
+   ↓
+Piper-TTS
+   ↓
+Audio Playback
+```
+
+---
+
+# 🔧 Core Components
+
+| Component              | Purpose                                      |
+| ---------------------- | -------------------------------------------- |
+| vLLM                   | High-speed LLM inference and token streaming |
+| Hugging Face Tokenizer | Chat template formatting                     |
+| Whisper                | Speech-to-text transcription                 |
+| Piper-TTS              | Fully offline text-to-speech synthesis       |
+| Gradio                 | Browser-based UI and interaction layer       |
+| ROCm                   | GPU acceleration on AMD hardware             |
+
+---
+
+# 🖥 Supported Platforms
+
+## Operating Systems
+
+* Ubuntu 22.04 LTS
+* Ubuntu 24.04 LTS
+
+## Supported Hardware
+
+* AMD Radeon AI PRO R9700
+* AMD Radeon AI PRO R9600
+* AMD Ryzen AI MAX+ 390
+* AMD Instinct GPUs
+* RDNA3 / RDNA4 GPUs
+* CDNA2 / CDNA3 / CDNA4 GPUs
+
+## Software Stack
+
+* ROCm 7.2+
+* Python 3.10+
+* PyTorch ROCm builds
+* vLLM 0.20+
+* Gradio
+* faster-whisper
+* Piper-TTS
+
+---
+
+# ⚡ Highlights
+
+* 100% local execution
+* No cloud dependencies
+* Real-time token streaming
+* Fully GPU accelerated
+* Optimized for AMD ROCm AI workloads
+* Designed for demos, AI agents, local copilots, and enterprise AI showcases
+
 
 # 🚀 Select Your AMD AI Platform
 
