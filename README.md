@@ -40,6 +40,111 @@ Microphone → Whisper → Gemma 4 (vLLM with real-time streaming) → Piper-TTS
 - Microphone input
 - Autoplay audio responses
 
+````markdown
+# 🚀 Select Your AMD AI Platform
+
+Choose your installation path below:
+
+| Platform | Description | Installation |
+|---|---|---|
+| 🟥 **Radeon AI PRO R9700** | Dedicated workstation GPU with high VRAM capacity | [Go to Installation](#-radeon-ai-pro-r9700-installation) |
+| 🟦 **Ryzen AI MAX+ 390** | Unified memory AI APU platform optimized for efficiency | [Go to Installation](#-ryzen-ai-max-390-installation) |
+
+---
+
+# 🟥 Radeon AI PRO R9700 Installation
+
+## Recommended Environment
+- Ubuntu 24.04
+- ROCm 6.4.2+
+- Radeon AI PRO R9700
+- vLLM >= 0.20
+
+### Install ROCm
+```bash
+sudo apt update
+sudo apt install rocm
+````
+
+### Verify GPU Detection
+
+```bash
+rocminfo
+rocm-smi
+```
+
+### Create Python Environment
+
+```bash
+python3 -m venv gemma4
+source gemma4/bin/activate
+```
+
+### Install PyTorch + vLLM
+
+```bash
+pip install torch torchvision torchaudio
+pip install vllm>=0.20
+```
+
+### Launch Application
+
+```bash
+python app.py
+```
+
+---
+
+# 🟦 Ryzen AI MAX+ 390 Installation
+
+## Recommended Environment
+
+* Ubuntu 24.04
+* Ryzen AI MAX+ 390
+* ROCm 6.4.2+
+* Shared memory optimized setup
+
+### Configure UMA Memory
+
+Set in BIOS:
+
+* UMA Frame Buffer Size → Highest available
+* Enable iGPU shared memory optimization
+
+### Install ROCm
+
+```bash
+sudo apt update
+sudo apt install rocm
+```
+
+### Create Python Environment
+
+```bash
+python3 -m venv gemma4_apu
+source gemma4_apu/bin/activate
+```
+
+### Install PyTorch + vLLM
+
+```bash
+pip install torch torchvision torchaudio
+pip install vllm>=0.20
+```
+
+### Launch Application
+
+```bash
+python app.py
+```
+
+```
+```
+
+
+
+
+
 ## ⚙️ Model Configuration
 ```python
 MODEL_ID = "Phu-Hien/gemma_4_dkkd_lora_vllm"
